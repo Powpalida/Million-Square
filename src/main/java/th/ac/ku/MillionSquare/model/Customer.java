@@ -4,11 +4,13 @@ public class Customer {
     private int id;
     private String name;
     private String pin;
+    private String tel;
 
-    public Customer(int id, String name, String pin) {
+    public Customer(int id, String name, String pin,String tel) {
         this.id = id;
         this.name = name;
         this.pin = pin;
+        this.tel = tel;
     }
 
     public int getId() {
