@@ -3,12 +3,30 @@
       layout:decorate="~{fragments/main_layout}"
       xmlns:th="https://www.thymeleaf.org">
 
-<div style="background-color: ##FEEEFF;" layout:fragment="content" >
-    <div class="jumbotron">
+<div style="background-color: ##FEEEFF;" layout:fragment="content" class="container">
         <h1 class="display-4 my-font" th:text="${contact}"></h1>
-        <p class="lead">Hello, everyone.</p>
-        <p>How are you doing?</p>
-    </div>
+        <form >
+            <div class="form-group">
+                <label style="font-size: 20px;" for="inputName">Your Name</label>
+                <input type="input" class="form-control" name="name" id="inputName">
+            </div>
+            <div class="form-group">
+                <label style="font-size: 20px;" for="inputEmail">Your Email</label>
+                <input type="email" class="form-control" id="inputEmail" placeholder="name@example.com">
 
+            </div>
+            <div class="form-group">
+                <label style="font-size: 20px;" for="inputSubject">Subject</label>
+                <input type="input" class="form-control" name="subject" id="inputSubject">
+            </div>
+            <div class="form-group">
+                <label style="font-size: 20px;" for="inputMessage">Message</label>
+                <textarea class="form-control" name="message" id="inputMessage" cols="30" rows="10"></textarea>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit">Send</button>
+            </div>
 
+        </form>
 </div>
+
