@@ -1,7 +1,10 @@
 <!DOCTYPE HTML>
-<html xmlns:layout="http://www.w3.org/1999/xhtml"
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html"
       layout:decorate="~{fragments/main_layout}"
       xmlns:th="https://www.thymeleaf.org">
+<head><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+            crossorigin="anonymous"></head>
 
 <div layout:fragment="content" >
 
@@ -10,8 +13,40 @@
         <div class="card-body">
             <h5 class="card-title">CROISSANT</h5>
             <p class="card-text">Homemade Croissants recipe is so buttery, flaky, and will make your morning breakfast so much more delicious!</p>
-            <a href="#" class="btn btn-primary">ORDER</a>
+            <a href="#" class="btn btn-primary" onclick="addTheValue(1)">ORDER</a>
+
+
         </div>
+
     </div>
+
+    <p align="right">
+
+        <b> <label id="total" style="font-size:160%;">0</label></b>
+        <i class="fa fa-shopping-basket fa-5x" aria-hidden="true"
+                                   onclick="window.location.href='payment';" ></i>
+
+    </p>
+
+    <script>
+    function addTheValue(secondValue) {
+        var fValue = document.getElementById("total");
+        total.innerHTML = parseInt(fValue.innerHTML) + parseInt(secondValue);
+    }
+
+</script>
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
 
 </div>

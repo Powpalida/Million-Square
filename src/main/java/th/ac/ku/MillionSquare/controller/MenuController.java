@@ -11,6 +11,7 @@ import java.util.List;
 @Controller
 public class MenuController {
 
+
     @RequestMapping("/menu")
     public String getMenuPage(Model model){
         List<Menu> menuList = new ArrayList<>();
@@ -20,4 +21,5 @@ public class MenuController {
         model.addAttribute("menu","menus");
         return "menu";
     }
+
 }

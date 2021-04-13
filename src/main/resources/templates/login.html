@@ -7,18 +7,21 @@
     <h1 style="color: #B5D8E1;" >Login</h1>
     <form action="#" th:action="@{/login}" method="POST">
         <div class="form-group">
-            <label style="font-size: 20px;" for="inputId">Id</label>
-            <input type="input" class="form-control" name="id" id="inputId">
+            <label style="font-size: 20px;" for="inputUsername">username</label>
+            <input type="input" class="form-control" name="username" id="inputUsername">
         </div>
 
         <div class="form-group">
-            <label style="font-size: 20px;" for="inputPin">Pin</label>
-            <input type="password" class="form-control" name="pin" id="inputPin">
+            <label style="font-size: 20px;" for="inputPassword">password</label>
+            <input type="password" class="form-control" name="password" id="inputPassword">
         </div>
 
-        <div class="form-group">
-            <input type="submit" class="btn btn-primary">
+
+        <div class= "form-group" style="padding: 5px;">
+            <input type="button" class="btn btn-primary" value="submit" onclick="window.location.href='home';">
         </div>
     </form>
+
+
     <a th:href="@{/customer}">register here</a>
 </div>

@@ -5,6 +5,7 @@ public class Customer {
     private String name;
     private String pin;
     private String tel;
+    private String creditCard;
 
     public Customer(int id, String name, String pin,String tel) {
         this.id = id;
