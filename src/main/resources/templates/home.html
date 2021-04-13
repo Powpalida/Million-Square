@@ -5,7 +5,7 @@
 
 
 
-<div layout:fragment="content"  class="container-xl" >
+<div layout:fragment="content"  class="container" >
     <style>
 body {
 background-color: #EAEDED
@@ -19,21 +19,21 @@ background-color: #EAEDED
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="cakecho2.jpg" class="d-block w-100 h-400" alt="...">
+                <img src="cakecho2.jpg"  class="container"width="400"  height="800" alt="...">
                 <div class="carousel-caption d-none d-md-block" >
                     <h5>CHOCOLATE CAKE</h5>
                     <p>BEST SELLER!!!</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="lemonpie.jpg" class="d-block w-100 h-400" alt="...">
+                <img src="lemonpie.jpg"  class="container" width="400" height="800" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>LEMON MERINGUE PIE</h5>
                     <p>NOW ON TREND!!!</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="magaroon.jpg" class="d-block w-100 h-400" alt="...">
+                <img src="magaroon.jpg"  class="container" width="400" height="800" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>MINT MACARON</h5>
                     <p>New flavor French Macarons of Million Square.Try now!</p>
@@ -52,7 +52,7 @@ background-color: #EAEDED
 
     <div class="jumbotron">
         <h1 class="display-4 my-font" th:text="${greeting}"></h1>
-        <p class="lead">Hello, everyone.</p>
+        <p class="lead">Welcome to Million Square.Homemade bakery with love.Don't waste another minute, get yours now.Have a nice day.</p>
 
         Customer, please <a th:href="@{/customer}">register</a>
     </div>
