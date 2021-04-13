@@ -1,12 +1,11 @@
 package th.ac.ku.MillionSquare.service;
-
 import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 import th.ac.ku.MillionSquare.model.Customer;
-
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
+
 
 @Service
 public class CustomerService {
