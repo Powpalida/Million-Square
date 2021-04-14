@@ -3,7 +3,75 @@
       layout:decorate="~{fragments/main_layout}"
       xmlns:th="https://www.thymeleaf.org">
 
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="bask.css" type="text/css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
 <div layout:fragment="content" class="container">
+    <style>
+    *{padding:0;margin:0;}
+
+body{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:18px;
+	background-color:#CCC;
+}
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:50px;
+	right:40px;
+	background-color:#0C9;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.my-float{
+	margin-top:22px;
+}
+.fab-label {
+    padding: 2px 5px;
+    align-self: center;
+    user-select: none;
+    white-space: nowrap;
+    border-radius: 3px;
+    font-size: 20px;
+    background: #666666;
+    color: #ffffff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    margin-right: 10px;
+}
+.fab-container {
+    position: fixed;
+    bottom: 60px;
+    right: 100px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+
+    </style>
+
+    <div class="fab-container">
+        <span id="basket" class="fab-label">0</span></div>
+    <a href="#" class="float">
+        <i class="fas fa-shopping-basket my-float"></i>
+    </a>
+
+    <script>
+    function addTheValue(secondValue) {
+        var fValue = document.getElementById("basket");
+        basket.innerHTML = parseInt(fValue.innerHTML) + parseInt(secondValue);
+    }
+    </script>
+
+
     <div class="row row-cols-4 row-cols-md-3 g-4">
         <div class="col">
             <div class="card h-100">
@@ -19,7 +87,7 @@
 
                     </p>
                     <p class="font-weight-bolder" style="float:left">80 ฿</p>
-                    <a href="#" class="btn btn-outline-success" style="float:right">ORDER</a>
+                    <a href="#" class="btn btn-outline-success" style="float:right" onclick="addTheValue(1)">ORDER</a>
 
                 </div>
                 <div class="card-footer">
@@ -44,7 +112,7 @@
                     </p>
                     <p class="font-weight-bolder" style="float:left">40 ฿ </p>
                     <p class="font-italic" style="float:left-bottom"> (Per piece)</p>
-                    <a href="#" class="btn btn-outline-success" style="float:right">ORDER</a>
+                    <a href="#" class="btn btn-outline-success" style="float:right" onclick="addTheValue(1)" >ORDER</a>
                 </div>
             </div>
         </div>
@@ -63,7 +131,7 @@
                         or more generally any dish wherein bread serves as a container or wrapper for another food type.
                     </p>
                     <p class="font-weight-bolder" style="float:left">70 ฿ </p>
-                    <a href="#" class="btn btn-outline-success" style="float:right">ORDER</a>
+                    <a href="#" class="btn btn-outline-success" style="float:right" onclick="addTheValue(1)">ORDER</a>
                 </div>
             </div>
         </div>
@@ -80,7 +148,7 @@
                         Chocolate cupcake on top with dark chocolate and soft cream.
                     </p>
                     <p class="font-weight-bolder" style="float:left">65 ฿ </p>
-                    <a href="#" class="btn btn-outline-success" style="float:right">ORDER</a>
+                    <a href="#" class="btn btn-outline-success" style="float:right" onclick="addTheValue(1)">ORDER</a>
                 </div>
             </div>
         </div>
@@ -98,7 +166,7 @@
                         There are chopped strawberries in the cupcake and strawberry buttercream!
                     </p>
                     <p class="font-weight-bolder" style="float:left">75 ฿ </p>
-                    <a href="#" class="btn btn-outline-success" style="float:right">ORDER</a>
+                    <a href="#" class="btn btn-outline-success" style="float:right" onclick="addTheValue(1)">ORDER</a>
                 </div>
             </div>
         </div>
@@ -118,7 +186,7 @@
                     </p>
                     <p class="font-weight-bolder" style="float:left">110 ฿ </p>
                     <p class="font-italic" style="float:left-bottom"> (Per piece)</p>
-                    <a href="#" class="btn btn-outline-success" style="float:right">ORDER</a>
+                    <a href="#" class="btn btn-outline-success" style="float:right" onclick="addTheValue(1)">ORDER</a>
                 </div>
                 <div class="card-footer">
                     <small class="text-muted">ON TREND</small>
@@ -140,7 +208,7 @@
                     </p>
                     <p class="font-weight-bolder" style="float:left">470 ฿ </p>
                     <p class="font-italic" style="float:left-bottom"> (1 pound )</p>
-                    <a href="#" class="btn btn-outline-success" style="float:right">ORDER</a>
+                    <a href="#" class="btn btn-outline-success" style="float:right" onclick="addTheValue(1)">ORDER</a>
                 </div>
             </div>
         </div>
@@ -158,7 +226,7 @@
                     </p>
                     <p class="font-weight-bolder" style="float:left">520 ฿ </p>
                     <p class="font-italic" style="float:left-bottom"> (1 pound )</p>
-                    <a href="#" class="btn btn-outline-success" style="float:right">ORDER</a>
+                    <a href="#" class="btn btn-outline-success" style="float:right" onclick="addTheValue(1)">ORDER</a>
                 </div>
                 <div class="card-footer">
                     <small class="text-muted">BEST SELLER!</small>
@@ -179,7 +247,7 @@
                     </p>
                     <p class="font-weight-bolder" style="float:left">120 ฿ </p>
                     <p class="font-italic" style="float:left-bottom"> (Per 3 pieces)</p>
-                    <a href="#" class="btn btn-outline-success" style="float:right">ORDER</a>
+                    <a href="#" class="btn btn-outline-success" style="float:right" onclick="addTheValue(1)">ORDER</a>
                 </div>
                 <div class="card-footer">
                     <small class="text-muted">BEST SELLER!</small>
@@ -200,7 +268,7 @@
                     </p>
                     <p class="font-weight-bolder" style="float:left">60 ฿ </p>
                     <p class="font-italic" style="float:left-bottom"> (Per 2 pieces)</p>
-                    <a href="#" class="btn btn-outline-success" style="float:right">ORDER</a>
+                    <a href="#" class="btn btn-outline-success" style="float:right" onclick="addTheValue(1)">ORDER</a>
                 </div>
             </div>
         </div>
@@ -218,7 +286,7 @@
                     </p>
                     <p class="font-weight-bolder" style="float:left">140 ฿ </p>
                     <p class="font-italic" style="float:left-bottom"> (Per 3 pieces)</p>
-                    <a href="#" class="btn btn-outline-success" style="float:right">ORDER</a>
+                    <a href="#" class="btn btn-outline-success" style="float:right" onclick="addTheValue(1)">ORDER</a>
                 </div>
                 <div class="card-footer">
                     <small class="text-muted">NEW FLAVOUR</small>
@@ -239,11 +307,13 @@
                     </p>
                     <p class="font-weight-bolder" style="float:left">120 ฿ </p>
                     <p class="font-italic" style="float:left-bottom"> (Per 3 pieces)</p>
-                    <a href="#" class="btn btn-outline-success" style="float:right">ORDER</a>
+                    <a href="#" class="btn btn-outline-success" style="float:right" onclick="addTheValue(1)">ORDER</a>
                 </div>
             </div>
         </div>
 
     </div>
+
+
 
 </div>
