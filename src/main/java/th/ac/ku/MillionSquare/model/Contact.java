@@ -1,24 +1,26 @@
 package th.ac.ku.MillionSquare.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Contact {
-    private int id;
+    @Id
     private String name;
-    private String phonenum;
-    private String mail;
 
-    public Contact(int id, String name, String phonenum, String mail) {
-        this.id = id;
+    private String email;
+    private String subjects;
+    private String message;
+
+    public Contact(String name, String email, String subjects,String message) {
         this.name = name;
-        this.phonenum = phonenum;
-        this.mail = mail;
+        this.email = email;
+        this.subjects = subjects;
+        this.message = message;
     }
 
-    public int getId() {
-        return id;
-    }
+    public Contact(){
 
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -29,19 +31,27 @@ public class Contact {
         this.name = name;
     }
 
-    public String getPhonenum() {
-        return phonenum;
+    public String getEmail() {
+        return email;
     }
 
-    public void setPhonenum(String phonenum) {
-        this.phonenum = phonenum;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getMail() {
-        return mail;
+    public String getMessage() {
+        return message;
     }
 
-    public void setMail(String mail) {
-        this.mail = mail;
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public String getSubjects() {
+        return subjects;
+    }
+
+    public void setSubjects(String subjects) {
+        this.subjects = subjects;
     }
 }

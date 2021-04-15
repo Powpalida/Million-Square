@@ -3,7 +3,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Admin {
+public class Ad_min {
 
     @Id
     private int id;
@@ -12,13 +12,13 @@ public class Admin {
     private String pin;
     private String tel;
 
-    public Admin(int id, String name, String pin,String tel) {
+    public Ad_min(int id, String name, String pin, String tel) {
         this.id = id;
         this.name = name;
         this.pin = pin;
         this.tel = tel;
     }
-    public Admin(){
+    public Ad_min(){
 
     }
 
