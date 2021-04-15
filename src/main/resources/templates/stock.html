@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{fragments/main_layout}"
+      xmlns:th="https://www.thymeleaf.org">
+
+
+<div class="container"  layout:fragment="content">
+
+
+    <h1 th:text="${stocks}"></h1>
+    <p>Hello, How are you doing?</p>
+
+    <table class="table table-bordered">
+        <thead class="thead-light">
+        <tr>
+            <th>Id Product</th>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Balance</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tr th:each="product:${allProducts}">
+            <td th:text="${product.productId}">
+            <td th:text="${product.productName}">
+            <td  th:text="${product.price}">
+            <td  th:text="${product.balance}">
+            <td><a class="btn btn-primary"
+                   th:href="@{/edit}">Edit</a></td>
+
+        </tr>
+    </table>
+</div>

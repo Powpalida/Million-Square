@@ -5,28 +5,31 @@
 
 <div layout:fragment="content" class="container">
     <div class="row row-cols-4 row-cols-md-3 g-4">
-        <div class="col">
-            <div class="card h-100">
-                <img
-                        src="croissants.jpg" height="400px" width="70px"
-                        class="card-img-top"
-                        alt="..."
-                />
-                <div class="card-body">
-                    <h5 class="card-title">SALTED EGG LAVA CROISSANT</h5>
-                    <p class="card-text">
-                        Homemade Salted Egg Lava Croissant.This hot flaky soft croissant oozing with warm, creamy and golden salted egg custard.
+        <form action="#" th:action="@{/menu}" method="POST">
+            <div class="col">
+                <div class="card h-100">
+                    <img
+                            src="croissants.jpg" height="400px" width="70px"
+                            class="card-img-top"
+                            alt="..."
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">SALTED EGG LAVA CROISSANT</h5>
+                        <p class="card-text">
+                            Homemade Salted Egg Lava Croissant.This hot flaky soft croissant oozing with warm, creamy and golden salted egg custard.
 
-                    </p>
-                    <p class="font-weight-bolder" style="float:left">80 ฿</p>
-                    <a href="#" class="btn btn-outline-success" style="float:right">ORDER</a>
+                        </p>
+                        <p class="font-weight-bolder" style="float:left">80 ฿</p>
+                        <a href="#" class="btn btn-outline-success" style="float:right">ORDER</a>
 
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted"> MUST TRY!!</small>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted"> MUST TRY!!</small>
+                    </div>
                 </div>
             </div>
-        </div>
+        </form>
+
         <div class="col">
             <div class="card h-100">
                 <img
