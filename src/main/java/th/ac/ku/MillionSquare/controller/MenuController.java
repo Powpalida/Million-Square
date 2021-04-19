@@ -21,28 +21,16 @@ public class MenuController {
 
 
     @GetMapping
-    public String getHomePage(Model model){
+    @RequestMapping("/menu")
+    public String getMenuPage(Model model){
         return "menu";
     }
 
     @PostMapping
     public String sendContact(@ModelAttribute Menu menu, Model model) {
         System.out.println("okay okay");
-//        model.addAttribute("name", "SALTED EGG LAVA CROISSANT");
+        model.addAttribute("name", "SALTED EGG LAVA CROISSANT");
         return "redirect:menu";
     }
 
-//    @GetMapping("/order/{id}")
-//    public String getEditStocktPage(@PathVariable int id, Model model){
-//        Stock stock = service.getStock(id);
-//        model.addAttribute("stock",stock);
-//        return "order";
-//    }
-//
-//    @PostMapping("/order/{id}")
-//    public String editStock(@PathVariable int id,@ModelAttribute Stock stock,Model model){
-//        service.editStock(stock,id);
-////        model.addAttribute("allProducts",service.getAllStock());
-//        return "redirect:/menu";
-//    }
 }

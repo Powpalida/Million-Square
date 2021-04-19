@@ -13,6 +13,7 @@ import th.ac.ku.MillionSquare.service.ContactService;
 import th.ac.ku.MillionSquare.service.CustomerService;
 
 @Controller
+
 @RequestMapping("/contact")
 public class ContactController {
 

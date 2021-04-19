@@ -22,6 +22,7 @@ public class Stock {
     }
     public Stock(){}
 
+
     public int getProductId() {
         return productId;
     }
@@ -53,8 +54,6 @@ public class Stock {
     public void setBalance(int balance) {
         this.balance = balance;
     }
-
-
 
     @Override
     public String toString() {
