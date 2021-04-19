@@ -10,6 +10,7 @@
     <h1 th:text="${stocks}"></h1>
     <p>Hello, How are you doing?</p>
 
+
     <table class="table table-bordered">
         <thead class="thead-light">
         <tr>
@@ -20,14 +21,24 @@
             <th>Action</th>
         </tr>
         </thead>
-        <tr th:each="product:${allProducts}">
-            <td th:text="${product.productId}">
-            <td th:text="${product.productName}">
-            <td  th:text="${product.price}">
-            <td  th:text="${product.balance}">
-            <td><a class="btn btn-primary"
-                   th:href="@{/edit}">Edit</a></td>
-
+        <tbody>
+        <tr th:each="stock:${allProducts}">
+            <td th:text="${stock.productId}">
+            <td th:text="${stock.productName}">
+            <td  th:text="${stock.price}">
+            <td  th:text="${stock.balance}">
+            <td>
+                <div class="w3-show-inline-block">
+                    <div class="w3-bar" style="display:flex ; justify-content:center ; align-items:center ;">
+                        <a style="width:70px ; margin-right:15px" class="btn btn-primary"
+                           th:href="@{/stock/edit/{id}(id=${stock.productId})}">Edit</a>
+                        <form th:action="@{/stock/delete/{id}(id=${stock.productId})}" method="POST">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </td>
         </tr>
+        <tbody>
     </table>
 </div>

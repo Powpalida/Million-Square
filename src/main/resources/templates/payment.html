@@ -1,56 +1,51 @@
 <!DOCTYPE HTML>
-<html xmlns:layout="http://www.w3.org/1999/xhtml"
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html"
       layout:decorate="~{fragments/main_layout}"
       xmlns:th="https://www.thymeleaf.org">
 
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/javascript">
+</head>
+
 <div layout:fragment="content"  class="container" >
-    <div id="shopping-cart">
-        <b class="txt-heading">Shopping Cart</b>
-        <a href="index.php?action=empty" class="btn btn-outline-success" style="float:right">Clear Cart</a>
 
-        <table class="tbl-cart" cellpadding="10" cellspacing="3">
-            <tbody>
-            <tr>
-                <th style="text-align left;">Name</th>
-                <th style="text-align left;">Quantity</th>
-                <th style="text-align left;">Price</th>
-                <th style="text-align left;">Remove</th>
+    </br>
 
-            </tr>
+    <b class="txt-heading" style="font-size:30px">Payment</b>
+    <form th:action="@{/payment}" method="POST">
 
-            <tr>
-                <h1 class="display-4 my-font" th:text="${name}"></h1>
-                <th>style="text-align left;">Name</th>
-                <th>style="text-align left;">Name</th>
-            </tr>
+        <div class="form-group" style="padding: 5px;">
+            <label for="inputName">Name</label>
+            <input type="input" class="form-control" name="name" id="inputName">
+        </div>
 
-            </tbody>
-        </table>
+        <div class="form-group" style="padding: 5px;">
+            <label for="inputAddress">Address</label>
+            <input type="input" class="form-control" name="address" id="inputAddress">
+        </div>
+
+        <div class="form-group" style="padding: 5px;">
+            <label for="inputTel">Tel</label>
+            <input type="input" class="form-control" name="address" id="inputTel">
+        </div>
+
+        <div class="form-group" style="padding: 5px;">
+            <label for="inputCreditCard">Credit card number(debit,visa)</label>
+            <input type="input" class="form-control" name="creditCard" id="inputCreditCard">
+        </div>
+    </form>
+
+    <script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Success,thank you for shopping with us.";
+}
+</script>
+
+    <a href="#" class="btn btn-outline-success" style="float:right"  onclick="myFunction()">ORDER</a>
+    <p id="demo" style="color:red;"></p>
 
 
-
-
-        <b class="txt-heading">Payment</b>
-        <form th:action="@{/payment}" method="POST">
-
-            <div class="form-group" style="padding: 5px;">
-                <label for="inputName">Name</label>
-                <input type="input" class="form-control" name="name" id="inputName">
-            </div>
-
-            <div class="form-group" style="padding: 5px;">
-                <label for="inputAddress">Address</label>
-                <input type="input" class="form-control" name="address" id="inputAddress">
-            </div>
-
-            <div class="form-group" style="padding: 5px;">
-                <label for="inputTel">Tel</label>
-                <input type="input" class="form-control" name="address" id="inputTel">
-            </div>
-
-            <div class="form-group" style="padding: 5px;">
-                <label for="inputCreditCard">Credit card number(debit,visa)</label>
-                <input type="input" class="form-control" name="creditCard" id="inputCreditCard">
-            </div>
-        </form>
-    </div>
+</div>
+</div>
+</html>

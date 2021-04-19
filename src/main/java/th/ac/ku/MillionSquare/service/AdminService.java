@@ -30,7 +30,6 @@ public class AdminService {
         }
 
     }
-
     public Ad_min findAdmin(int id){
         return repository.findById(id).get();
     }

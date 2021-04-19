@@ -1,35 +1,331 @@
 <!DOCTYPE HTML>
-<html xmlns:layout="http://www.w3.org/1999/xhtml"
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html"
       layout:decorate="~{fragments/main_layout}"
       xmlns:th="https://www.thymeleaf.org">
 
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
 <div layout:fragment="content" class="container">
+    <style>
+    *{padding:0;margin:0;}
+
+body{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:18px;
+	background-color:#CCC;
+}
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:50px;
+	right:40px;
+	background-color:#0C9;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.my-float{
+	margin-top:22px;
+}
+.fab-label {
+    padding: 2px 5px;
+    align-self: center;
+    user-select: none;
+    white-space: nowrap;
+    border-radius: 3px;
+    font-size: 20px;
+    background: #666666;
+    color: #ffffff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    margin-right: 10px;
+}
+.fab-container {
+    position: fixed;
+    bottom: 60px;
+    right: 100px;
+    z-index: 999;
+    cursor: pointer;
+}
+    </style>
+
+    </head>
+
+
+    <div class="fab-container">
+        <span id="basket" class="fab-label">0</span></div>
+    <a class="float" >
+        <i class="fas fa-shopping-basket my-float" onclick="window.location.href='payment';"> </i>
+    </a>
+
+    <p class="font-weight-bolder" style="float:left">Shopping Basket</p>
+    <br>
+
+    <script>
+        function AddCroissant(){
+
+    var table = document.getElementById("mytable");
+    var row = table.insertRow(1);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+
+    cell1.innerHTML = 'Salted Egg Lava Croissant';
+    cell2.innerHTML = '80฿';
+    addTheValue(80);
+
+    }
+    </script>
+    <script>
+        function AddDonut(){
+
+    var table = document.getElementById("mytable");
+    var row = table.insertRow(1);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+
+    cell1.innerHTML = 'Donut';
+    cell2.innerHTML = '40฿';
+    addTheValue(40);
+
+    }
+    </script>
+    <script>
+        function AddSandwitch(){
+
+    var table = document.getElementById("mytable");
+    var row = table.insertRow(1);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+
+    cell1.innerHTML = 'Sandwitch';
+    cell2.innerHTML = '70฿';
+    addTheValue(70);
+
+    }
+    </script>
+
+    <script>
+        function addChocoCupcake(){
+
+    var table = document.getElementById("mytable");
+    var row = table.insertRow(1);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+
+    cell1.innerHTML = 'Choco Cupcake';
+    cell2.innerHTML = '65฿';
+    addTheValue(65);
+
+    }
+    </script>
+
+    <script>
+        function addStrawberryCupcake(){
+
+    var table = document.getElementById("mytable");
+    var row = table.insertRow(1);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+
+    cell1.innerHTML = 'Strawberry Cupcake';
+    cell2.innerHTML = '75฿';
+    addTheValue(75);
+
+    }
+    </script>
+
+    <script>
+        function addLemonMerinGuepie(){
+
+    var table = document.getElementById("mytable");
+    var row = table.insertRow(1);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+
+    cell1.innerHTML = 'Lemon meringue pie';
+    cell2.innerHTML = '110฿';
+    addTheValue(110);
+
+    }
+    </script>
+
+    <script>
+        function addBerryCake(){
+
+    var table = document.getElementById("mytable");
+    var row = table.insertRow(1);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+
+    cell1.innerHTML = 'Berry cake';
+    cell2.innerHTML = '470฿';
+     addTheValue(470);
+
+    }
+    </script>
+
+    <script>
+        function addChocolateCake(){
+
+    var table = document.getElementById("mytable");
+    var row = table.insertRow(1);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+
+    cell1.innerHTML = 'Dark chocolate cake';
+    cell2.innerHTML = '520฿';
+    addTheValue(520);
+
+    }
+    </script>
+
+    <script>
+        function addBrownies(){
+
+    var table = document.getElementById("mytable");
+    var row = table.insertRow(1);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+
+    cell1.innerHTML = 'Brownies';
+    cell2.innerHTML = '120฿';
+    addTheValue(120);
+
+    }
+    </script>
+
+    <script>
+        function addBiscuit(){
+
+    var table = document.getElementById("mytable");
+    var row = table.insertRow(1);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+
+    cell1.innerHTML = 'biscuit';
+    cell2.innerHTML = '60฿';
+    addTheValue(60);
+
+    }
+    </script>
+
+    <script>
+        function addMintMagaron(){
+
+    var table = document.getElementById("mytable");
+    var row = table.insertRow(1);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+
+    cell1.innerHTML = 'Mint Magaron';
+    cell2.innerHTML = '140฿';
+    addTheValue(140);
+
+
+
+    }
+    </script>
+    <script>
+        function addMagaron(){
+
+    var table = document.getElementById("mytable");
+    var row = table.insertRow(1);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+
+    cell1.innerHTML = 'Magaron';
+    cell2.innerHTML = '120฿';
+    addTheValue(120);
+    }
+
+    </script>
+
+    <br>
+
+
+    <script>
+        function DeleteTable(){
+            var table = document.getElementById("mytable");
+            for(var i = table.rows.length - 1; i > 0; i--)
+            {
+                table.deleteRow(i);
+                deleteTheValue(0)
+            }
+    }
+    </script>
+    <script >
+    function deleteTheValue(secondValue) {
+        var fValue = document.getElementById("basket");
+        basket.innerHTML =parseInt(fValue.innerHTML) * parseInt(secondValue) + '฿' ;
+
+    }
+    </script>
+
+    <button type="submit" class="btn btn-outline-success" style="float:right" onclick="DeleteTable()">Clear Basket</button>
+    <table id="mytable"  >
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+
+        </tr>
+
+    </table>
+
+
+
+    <script >
+    function addTheValue(secondValue) {
+        var fValue = document.getElementById("basket");
+        basket.innerHTML =parseInt(fValue.innerHTML) + parseInt(secondValue) + '฿' ;
+
+    }
+    </script>
+
+
+    <br>
     <div class="row row-cols-4 row-cols-md-3 g-4">
-        <form action="#" th:action="@{/menu}" method="POST">
-            <div class="col">
-                <div class="card h-100">
-                    <img
-                            src="croissants.jpg" height="400px" width="70px"
-                            class="card-img-top"
-                            alt="..."
-                    />
-                    <div class="card-body">
-                        <h5 class="card-title">SALTED EGG LAVA CROISSANT</h5>
-                        <p class="card-text">
-                            Homemade Salted Egg Lava Croissant.This hot flaky soft croissant oozing with warm, creamy and golden salted egg custard.
+        <div class="col">
+            <div class="card h-100">
+                <img
+                        src="croissants.jpg" height="400px" width="70px"
+                        class="card-img-top"
+                        alt="..."
+                />
+                <div class="card-body">
+                    <h5 class="card-title">SALTED EGG LAVA CROISSANT</h5>
+                    <p class="card-text">
+                        Homemade Salted Egg Lava Croissant.This hot flaky soft croissant oozing with warm, creamy and golden salted egg custard.
 
-                        </p>
-                        <p class="font-weight-bolder" style="float:left">80 ฿</p>
-                        <a href="#" class="btn btn-outline-success" style="float:right">ORDER</a>
+                    </p>
+                    <p class="font-weight-bolder" style="float:left">80 ฿</p>
+                    <a href="#" class="btn btn-outline-success" style="float:right" onclick="AddCroissant()">ORDER</a>
 
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted"> MUST TRY!!</small>
-                    </div>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted"> MUST TRY!!</small>
                 </div>
             </div>
-        </form>
-
+        </div>
         <div class="col">
             <div class="card h-100">
                 <img
@@ -47,7 +343,7 @@
                     </p>
                     <p class="font-weight-bolder" style="float:left">40 ฿ </p>
                     <p class="font-italic" style="float:left-bottom"> (Per piece)</p>
-                    <a href="#" class="btn btn-outline-success" style="float:right">ORDER</a>
+                    <a href="#" class="btn btn-outline-success" style="float:right" onclick="AddDonut()" >ORDER</a>
                 </div>
             </div>
         </div>
@@ -66,7 +362,7 @@
                         or more generally any dish wherein bread serves as a container or wrapper for another food type.
                     </p>
                     <p class="font-weight-bolder" style="float:left">70 ฿ </p>
-                    <a href="#" class="btn btn-outline-success" style="float:right">ORDER</a>
+                    <a href="#" class="btn btn-outline-success" style="float:right" onclick="AddSandwitch()">ORDER</a>
                 </div>
             </div>
         </div>
@@ -83,7 +379,7 @@
                         Chocolate cupcake on top with dark chocolate and soft cream.
                     </p>
                     <p class="font-weight-bolder" style="float:left">65 ฿ </p>
-                    <a href="#" class="btn btn-outline-success" style="float:right">ORDER</a>
+                    <a href="#" class="btn btn-outline-success" style="float:right" onclick="addChocoCupcake()">ORDER</a>
                 </div>
             </div>
         </div>
@@ -101,7 +397,7 @@
                         There are chopped strawberries in the cupcake and strawberry buttercream!
                     </p>
                     <p class="font-weight-bolder" style="float:left">75 ฿ </p>
-                    <a href="#" class="btn btn-outline-success" style="float:right">ORDER</a>
+                    <a href="#" class="btn btn-outline-success" style="float:right" onclick="addStrawberryCupcake()">ORDER</a>
                 </div>
             </div>
         </div>
@@ -121,7 +417,7 @@
                     </p>
                     <p class="font-weight-bolder" style="float:left">110 ฿ </p>
                     <p class="font-italic" style="float:left-bottom"> (Per piece)</p>
-                    <a href="#" class="btn btn-outline-success" style="float:right">ORDER</a>
+                    <a href="#" class="btn btn-outline-success" style="float:right" onclick="addLemonMerinGuepie()">ORDER</a>
                 </div>
                 <div class="card-footer">
                     <small class="text-muted">ON TREND</small>
@@ -143,7 +439,7 @@
                     </p>
                     <p class="font-weight-bolder" style="float:left">470 ฿ </p>
                     <p class="font-italic" style="float:left-bottom"> (1 pound )</p>
-                    <a href="#" class="btn btn-outline-success" style="float:right">ORDER</a>
+                    <a href="#" class="btn btn-outline-success" style="float:right" onclick="addBerryCake()">ORDER</a>
                 </div>
             </div>
         </div>
@@ -161,7 +457,7 @@
                     </p>
                     <p class="font-weight-bolder" style="float:left">520 ฿ </p>
                     <p class="font-italic" style="float:left-bottom"> (1 pound )</p>
-                    <a href="#" class="btn btn-outline-success" style="float:right">ORDER</a>
+                    <a href="#" class="btn btn-outline-success" style="float:right" onclick="addChocolateCake()">ORDER</a>
                 </div>
                 <div class="card-footer">
                     <small class="text-muted">BEST SELLER!</small>
@@ -182,7 +478,7 @@
                     </p>
                     <p class="font-weight-bolder" style="float:left">120 ฿ </p>
                     <p class="font-italic" style="float:left-bottom"> (Per 3 pieces)</p>
-                    <a href="#" class="btn btn-outline-success" style="float:right">ORDER</a>
+                    <a href="#" class="btn btn-outline-success" style="float:right" onclick="addBrownies()">ORDER</a>
                 </div>
                 <div class="card-footer">
                     <small class="text-muted">BEST SELLER!</small>
@@ -203,7 +499,7 @@
                     </p>
                     <p class="font-weight-bolder" style="float:left">60 ฿ </p>
                     <p class="font-italic" style="float:left-bottom"> (Per 2 pieces)</p>
-                    <a href="#" class="btn btn-outline-success" style="float:right">ORDER</a>
+                    <a href="#" class="btn btn-outline-success" style="float:right" onclick="addBiscuit()">ORDER</a>
                 </div>
             </div>
         </div>
@@ -221,7 +517,7 @@
                     </p>
                     <p class="font-weight-bolder" style="float:left">140 ฿ </p>
                     <p class="font-italic" style="float:left-bottom"> (Per 3 pieces)</p>
-                    <a href="#" class="btn btn-outline-success" style="float:right">ORDER</a>
+                    <a href="#" class="btn btn-outline-success" style="float:right" onclick="addMintMagaron()">ORDER</a>
                 </div>
                 <div class="card-footer">
                     <small class="text-muted">NEW FLAVOUR</small>
@@ -242,11 +538,13 @@
                     </p>
                     <p class="font-weight-bolder" style="float:left">120 ฿ </p>
                     <p class="font-italic" style="float:left-bottom"> (Per 3 pieces)</p>
-                    <a href="#" class="btn btn-outline-success" style="float:right">ORDER</a>
+                    <a href="#" class="btn btn-outline-success" style="float:right" onclick="addMagaron()">ORDER</a>
                 </div>
             </div>
         </div>
 
     </div>
+
+
 
 </div>

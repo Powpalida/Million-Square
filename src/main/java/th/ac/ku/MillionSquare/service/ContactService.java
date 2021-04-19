@@ -28,7 +28,6 @@ public class ContactService {
         }catch (NoSuchElementException e){
             return null;
         }
-
     }
 
     public Contact findContact(int id){
