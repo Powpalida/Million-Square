@@ -21,7 +21,6 @@ public class MenuController {
 
 
     @GetMapping
-    @RequestMapping("/menu")
     public String getMenuPage(Model model){
         return "menu";
     }
@@ -32,5 +31,4 @@ public class MenuController {
         model.addAttribute("name", "SALTED EGG LAVA CROISSANT");
         return "redirect:menu";
     }
-
 }

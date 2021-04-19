@@ -1,19 +1,13 @@
 <!DOCTYPE HTML>
-<html xmlns:layout="http://www.w3.org/1999/xhtml"
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html"
       layout:decorate="~{fragments/main_layout}"
       xmlns:th="https://www.thymeleaf.org">
 
 
 <div class="container"  layout:fragment="content">
-
-
     <h1 th:text="${stocks}"></h1>
     <p>Hello, How are you doing?</p>
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 93dce54627f6e5799d4ac9bd4e87781a5e2ddc33
     <table class="table table-bordered">
         <thead class="thead-light">
         <tr>
@@ -24,7 +18,6 @@
             <th>Action</th>
         </tr>
         </thead>
-<<<<<<< HEAD
         <tbody>
         <tr th:each="stock:${allProducts}">
             <td th:text="${stock.productId}">
@@ -43,19 +36,6 @@
                 </div>
             </td>
         </tr>
-        <tbody>
+        </tbody>
     </table>
 </div>
-=======
-        <tr th:each="product:${allProducts}">
-            <td th:text="${product.productId}">
-            <td th:text="${product.productName}">
-            <td  th:text="${product.price}">
-            <td  th:text="${product.balance}">
-            <td><a class="btn btn-primary"
-                   th:href="@{/edit}">Edit</a></td>
-
-        </tr>
-    </table>
-</div>
->>>>>>> 93dce54627f6e5799d4ac9bd4e87781a5e2ddc33

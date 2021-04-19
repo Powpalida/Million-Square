@@ -12,7 +12,6 @@ public class MenuService {
 
     private List<Menu> menuList;
 
-    @PostConstruct
     public void postConstruct(){
         this.menuList = new ArrayList<>();
     }

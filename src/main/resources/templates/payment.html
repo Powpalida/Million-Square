@@ -13,39 +13,27 @@
     </br>
 
     <b class="txt-heading" style="font-size:30px">Payment</b>
-    <form th:action="@{/payment}" method="POST">
-
+    <form>
         <div class="form-group" style="padding: 5px;">
             <label for="inputName">Name</label>
-            <input type="input" class="form-control" name="name" id="inputName">
+            <input type="input" class="form-control" name="name" id="inputName" required>
         </div>
 
         <div class="form-group" style="padding: 5px;">
             <label for="inputAddress">Address</label>
-            <input type="input" class="form-control" name="address" id="inputAddress">
+            <input type="input" class="form-control" name="address" id="inputAddress" required>
         </div>
 
         <div class="form-group" style="padding: 5px;">
             <label for="inputTel">Tel</label>
-            <input type="input" class="form-control" name="address" id="inputTel">
+            <input type="input" class="form-control" name="address" id="inputTel" required>
         </div>
 
         <div class="form-group" style="padding: 5px;">
             <label for="inputCreditCard">Credit card number(debit,visa)</label>
-            <input type="input" class="form-control" name="creditCard" id="inputCreditCard">
+            <input type="input" class="form-control" name="creditCard" id="inputCreditCard" required>
         </div>
+        <a><input type="submit" ></a>
     </form>
 
-    <script>
-function myFunction() {
-  document.getElementById("demo").innerHTML = "Success,thank you for shopping with us.";
-}
-</script>
-
-    <a href="#" class="btn btn-outline-success" style="float:right"  onclick="myFunction()">ORDER</a>
-    <p id="demo" style="color:red;"></p>
-
-
 </div>
-</div>
-</html>
