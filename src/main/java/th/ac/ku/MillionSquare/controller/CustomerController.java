@@ -1,5 +1,6 @@
 package th.ac.ku.MillionSquare.controller;
 
+import javafx.scene.chart.ScatterChart;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,15 +20,19 @@ import java.util.Optional;
 public class CustomerController {
 
     private CustomerService customerService;
-    private CustomerRepository repository;
-    public CustomerController(CustomerService customerService,CustomerRepository repository) {
+    private AdminService adminService;
+    private int check = 0;
+    public CustomerController(CustomerService customerService,AdminService adminService) {
         this.customerService = customerService;
-        this.repository = repository;
+        this.adminService = adminService;
     }
 
     @GetMapping
     public String getCustomerPage(Model model) {
-        model.addAttribute("allCustomers", customerService.getCustomers());
+        if(check == 2)
+            model.addAttribute("check", "this id is already exists");
+        else
+            model.addAttribute("check", "");
         return "customer";
     }
 
@@ -38,11 +43,23 @@ public class CustomerController {
 
             }
             else{
-                System.out.println("regis mai dai");
+                check = 2;
             }
         } catch (Exception e) {
+            try{
+                Ad_min ad_min = new Ad_min(customer.getId(),customer.getName(),customer.getPin(),customer.getTel());
+                if(adminService.checkPin(ad_min) == null){
+
+                }
+                else {
+                    check = 2;
+                    return "redirect:customer";
+                }
+            }catch (Exception ex){
+
+            }
+            check = 1;
             customerService.createCustomer(customer);
-            System.out.println("work2");
         }
         return "redirect:customer";
     }

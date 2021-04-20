@@ -39,7 +39,7 @@ public class LoginController {
     @PostMapping
     public  String login(@ModelAttribute Customer customer, Model model) {
         try {
-            if(customerService.checkPin(customer) == null){
+            if(customerService.checkPin(customer) == null ){
 
             }
             else{

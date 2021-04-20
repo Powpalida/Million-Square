@@ -7,8 +7,6 @@ import th.ac.ku.MillionSquare.model.Customer;
 import th.ac.ku.MillionSquare.model.Stock;
 import th.ac.ku.MillionSquare.service.StockService;
 
-import java.util.ArrayList;
-import java.util.List;
 
 @Controller
 @RequestMapping("/stock")

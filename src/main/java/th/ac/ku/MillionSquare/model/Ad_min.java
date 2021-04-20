@@ -53,5 +53,15 @@ public class Ad_min {
     public void setTel(String tel) {
         this.tel = tel;
     }
+
+    @Override
+    public String toString() {
+        return "Ad_min{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", pin='" + pin + '\'' +
+                ", tel='" + tel + '\'' +
+                '}';
+    }
 }
 
